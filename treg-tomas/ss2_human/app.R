@@ -1,7 +1,7 @@
 library(iSEE)
 library(SingleCellExperiment)
 sce <- readRDS("sce.rds")
-load("colourmap.RData")
+clrmap <- readRDS("colourmap.rds")
 
 # EXAMPLE settings - let the user use them if needed
 #
@@ -44,4 +44,4 @@ load("colourmap.RData")
 # iSEE(sce, redDimArgs=redDim, colDataArgs=colData, featAssayArgs=featAssay, heatMapArgs=heatMap, rowDataMax=0, rowStatArgs=rowStat,
 #     appTitle="Running emptyDrops on the PBMC 4K dataset", initialPanels=init, annotFun=annot.fun, tour=tour, runLocal=FALSE)
 
-iSEE(sce, colormap = ecm_ss2h, runLocal=FALSE)
+iSEE(sce, colormap = clrmap, runLocal=FALSE)

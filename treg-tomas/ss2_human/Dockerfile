@@ -8,7 +8,7 @@ ADD . /app
 
 # Download the data and the colourmap
 RUN /app/gdown.pl https://drive.google.com/file/d/1JCdcoGZH2J0TGvcs0pqbRb7s05Aucevj/view?usp=sharing /app/sce.rds
-RUN /app/gdown.pl https://drive.google.com/file/d/1slrXrHLuNgHnHsx1r8nNDaXl2j9JXULl/view?usp=sharing /app/colourmap.RData
+RUN /app/gdown.pl https://drive.google.com/file/d/1mFakW6KKunx7ogZvzaETbC1ayyI7vIK8/view?usp=sharing /app/colourmap.rds
 
 # Make port 8001 available to the world outside this container
 EXPOSE 8001
