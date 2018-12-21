@@ -28,7 +28,7 @@ if ($URL=~m#^https?://drive.google.com/file/d/([^/]+)#) {
 
 execute_command();
 
-while (-s $FILENAME < 100000) { # only if the file isn't the download yet
+while (-s $FILENAME == 0) { # only if the file isn't the download yet
     open fFILENAME, '<', $FILENAME;
     $check=0;
     foreach (<fFILENAME>) {
