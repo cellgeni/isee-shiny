@@ -10,8 +10,8 @@ ADD . /app
 RUN /app/gdown.pl https://drive.google.com/file/d/1JCdcoGZH2J0TGvcs0pqbRb7s05Aucevj/view?usp=sharing /app/sce.rds
 RUN /app/gdown.pl https://drive.google.com/file/d/1mFakW6KKunx7ogZvzaETbC1ayyI7vIK8/view?usp=sharing /app/colourmap.rds
 
-# Make port 8001 available to the world outside this container
-EXPOSE 8001
+# Make port 1234 available to the world outside this container
+EXPOSE 1234
 
 # Run the script that launches the Shiny app
 CMD Rscript docker.R
