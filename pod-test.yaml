@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: treg
+spec:
+  replicas: 3
+  selector:
+    app: treg
+  template:
+    metadata:
+      labels:
+        app: treg
+    spec:
+      containers:
+      - name: treg
+        image: quay.io/cellgeni/treg-tomas-ss2_human:treg-tomas-ss2_human-0.0.9
+        ports:
+        - containerPort: 1234
