@@ -13,6 +13,6 @@ spec:
     spec:
       containers:
       - name: treg
-        image: quay.io/cellgeni/treg-tomas-ss2_human:treg-tomas-ss2_human-0.0.9
+        image: quay.io/cellgeni/isee:treg-tomas-ss2_human-0.0.9
         ports:
         - containerPort: 1234
