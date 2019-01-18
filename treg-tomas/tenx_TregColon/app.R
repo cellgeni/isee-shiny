@@ -1,7 +1,7 @@
 library(iSEE)
 library(SingleCellExperiment)
-sce <- readRDS("sce.rds")
-clrmap <- readRDS("colourmap.rds")
+sce <- readRDS("data/sce.rds")
+clrmap <- readRDS("data/colourmap.rds")
 
 # EXAMPLE settings - let the user use them if needed
 #
