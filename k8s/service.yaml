@@ -1,0 +1,210 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tenx-skin
+  labels:
+    app: tenx-skin
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: isee
+  selector:
+    app: tenx-skin
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tenx-skin-test
+  labels:
+    app: tenx-skin
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: isee
+  selector:
+    app: tenx-skin
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tenx-skin-np
+  labels:
+    app: tenx-skin
+spec:
+  type: NodePort
+  ports:
+  - port: 35001
+    nodePort: 32333
+    targetPort: isee
+  selector:
+    app: tenx-skin
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ss2-human
+  labels:
+    app: ss2-human
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: isee
+  selector:
+    app: ss2-human
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ss2-mousecolon
+  labels:
+    app: ss2-mousecolon
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: isee
+  selector:
+    app: ss2-mousecolon
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ss2-mousemelanoma
+  labels:
+    app: ss2-mousemelanoma
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: isee
+  selector:
+    app: ss2-mousemelanoma
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ss2-mouseskin
+  labels:
+    app: ss2-mouseskin
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: isee
+  selector:
+    app: ss2-mouseskin
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tenx-tmembln
+  labels:
+    app: tenx-tmembln
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: isee
+  selector:
+    app: tenx-tmembln
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tenx-tmemcolon
+  labels:
+    app: tenx-tmemcolon
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: isee
+  selector:
+    app: tenx-tmemcolon
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tenx-tmemmln
+  labels:
+    app: tenx-tmemmln
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: isee
+  selector:
+    app: tenx-tmemmln
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tenx-tmemspleen
+  labels:
+    app: tenx-tmemspleen
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: isee
+  selector:
+    app: tenx-tmemspleen
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tenx-tregbln
+  labels:
+    app: tenx-tregbln
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: isee
+  selector:
+    app: tenx-tregbln
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tenx-tregcolon
+  labels:
+    app: tenx-tregcolon
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: isee
+  selector:
+    app: tenx-tregcolon
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tenx-tregmln
+  labels:
+    app: tenx-tregmln
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: isee
+  selector:
+    app: tenx-tregmln
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tenx-tregspleen
+  labels:
+    app: tenx-tregspleen
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: isee
+  selector:
+    app: tenx-tregspleen

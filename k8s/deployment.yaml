@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: isee
+spec:
+  selector:
+    matchLabels:
+      app: isee
+  replicas: 1
+  template:
+    metadata:
+      name: isee
+      labels:
+        app: isee
+    spec:
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: isee-pvc
+      containers:
+      - image: quay.io/cellgeni/isee:v0.1.2
+        imagePullPolicy: IfNotPresent
+        name: isee
+        volumeMounts:
+        - name: data
+          mountPath: /data/
+        ports:
+        - containerPort: 3838
+          name: isee
+        resources:
+          requests:
+            memory: "8Gi"
+            cpu: 1
+          limits:
+            memory: "16Gi"
+            cpu: 4
+      initContainers:
+      - name: pull-data
+        image: quay.io/cellgeni/isee:download_data
+        command: ['bash', 'get-data.sh']
+        volumeMounts:
+          - name: data
+            mountPath: /data
