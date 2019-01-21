@@ -1,7 +1,8 @@
 library(iSEE)
 library(SingleCellExperiment)
-sce <- readRDS("data/sce.rds")
-clrmap <- readRDS("data/colourmap.rds")
+datafolder = Sys.getenv("TREGCOLON_DATA_FOLDER", unset="")
+sce <- readRDS(file.path(datafolder, "sce.rds"))
+clrmap <- readRDS(file.path(datafolder, "colourmap.rds"))
 
 # EXAMPLE settings - let the user use them if needed
 #

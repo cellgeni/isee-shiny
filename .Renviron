@@ -1,0 +1,13 @@
+HUMAN_DATA_FOLDER=/data/treg-tomas/human
+MOUSECOLON_DATA_FOLDER=/data/treg-tomas/mousecolon
+MOUSEMELANOMA_DATA_FOLDER=/data/treg-tomas/mousemelanoma
+MOUSESKIN_DATA_FOLDER=/data/treg-tomas/mouseskin
+SKIN_DATA_FOLDER=/data/treg-tomas/skin
+TMEMBLN_DATA_FOLDER=/data/treg-tomas/tmembln
+TMEMCOLON_DATA_FOLDER=/data/treg-tomas/tmemcolon
+TMEMMLN_DATA_FOLDER=/data/treg-tomas/tmemmln
+TMEMSPLEEN_DATA_FOLDER=/data/treg-tomas/tmemspleen
+TREGBLN_DATA_FOLDER=/data/treg-tomas/tregbln
+TREGCOLON_DATA_FOLDER=/data/treg-tomas/tregcolon
+TREGMLN_DATA_FOLDER=/data/treg-tomas/tregmln
+TREGSPLEEN_DATA_FOLDER=/data/treg-tomas/tregspleen
