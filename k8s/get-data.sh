@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mkdir -p /data/treg-tomas/human
+mkdir -p /data/treg-tomas/ss2_human
 mkdir -p /data/treg-tomas/ss2_mousecolon
 mkdir -p /data/treg-tomas/ss2_mousemelanoma
 mkdir -p /data/treg-tomas/ss2_mouseskin
