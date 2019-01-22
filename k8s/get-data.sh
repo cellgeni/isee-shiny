@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cp Renviron.site /data/Renviron.site
+
 mkdir -p /data/treg-tomas/ss2_human
 mkdir -p /data/treg-tomas/ss2_mousecolon
 mkdir -p /data/treg-tomas/ss2_mousemelanoma

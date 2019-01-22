@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: isee
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       name: isee
@@ -27,6 +27,8 @@ spec:
         ports:
         - containerPort: 3838
           name: isee
+        environ:
+          R_ENVIRON: /data/Renviron.site
         resources:
           requests:
             memory: "8Gi"
@@ -36,7 +38,7 @@ spec:
             cpu: 4
       initContainers:
       - name: pull-data
-        image: quay.io/cellgeni/isee:fetch-data-v0.3.2
+        image: quay.io/cellgeni/isee:fetch-data-v0.3.3
         command: ['bash', 'get-data.sh']
         volumeMounts:
           - name: data
