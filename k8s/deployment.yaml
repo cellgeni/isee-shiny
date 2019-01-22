@@ -27,8 +27,9 @@ spec:
         ports:
         - containerPort: 3838
           name: isee
-        environ:
-          R_ENVIRON: /data/Renviron.site
+        env:
+          - name: R_ENVIRON
+            value: /data/Renviron.site
         resources:
           requests:
             memory: "8Gi"
