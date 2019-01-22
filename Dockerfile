@@ -41,6 +41,5 @@ RUN Rscript /tmp/install_iSEE.R
 RUN echo 'sanitize_errors off;disable_protocols xdr-streaming xhr-streaming iframe-eventsource iframe-htmlfile;' >> /etc/shiny-server/shiny-server.conf
 
 COPY treg-tomas /srv/shiny-server/treg-tomas
-COPY .Renviron /usr/local/lib/R/etc/Renviron.site
 
 CMD ["/usr/bin/shiny-server.sh"]
