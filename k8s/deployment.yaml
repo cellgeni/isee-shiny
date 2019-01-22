@@ -36,7 +36,7 @@ spec:
             cpu: 4
       initContainers:
       - name: pull-data
-        image: quay.io/cellgeni/isee:fetch-data-v0.2
+        image: quay.io/cellgeni/isee:fetch-data-v0.3
         command: ['bash', 'get-data.sh']
         volumeMounts:
           - name: data
