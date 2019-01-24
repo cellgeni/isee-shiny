@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: isee
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       name: isee
@@ -18,7 +18,7 @@ spec:
           persistentVolumeClaim:
             claimName: isee-pvc
       containers:
-      - image: quay.io/cellgeni/isee:v0.1.2
+      - image: quay.io/cellgeni/isee:v0.1.3
         imagePullPolicy: IfNotPresent
         name: isee
         volumeMounts:
@@ -26,10 +26,8 @@ spec:
           mountPath: /data/
         ports:
         - containerPort: 3838
+          hostPort: 13838
           name: isee
-        env:
-          - name: R_ENVIRON
-            value: /data/Renviron.site
         resources:
           requests:
             memory: "8Gi"
@@ -37,9 +35,16 @@ spec:
           limits:
             memory: "16Gi"
             cpu: 4
+        livenessProbe:
+          httpGet:
+            path: /treg-tomas/ss2_human
+            port: isee
+          initialDelaySeconds: 10
+          timeoutSeconds: 10
+          periodSeconds: 240
       initContainers:
       - name: pull-data
-        image: quay.io/cellgeni/isee:fetch-data-v0.3.3
+        image: quay.io/cellgeni/isee:fetch-data-v0.3.5
         command: ['bash', 'get-data.sh']
         volumeMounts:
           - name: data
