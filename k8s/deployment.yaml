@@ -44,7 +44,7 @@ spec:
           periodSeconds: 240
       initContainers:
       - name: pull-data
-        image: quay.io/cellgeni/isee:fetch-data-v0.3.5
+        image: quay.io/cellgeni/isee:fetch-data-v0.3.6
         command: ['bash', 'get-data.sh']
         volumeMounts:
           - name: data

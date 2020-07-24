@@ -1,5 +1,4 @@
-FROM perl
+FROM python:slim-buster
 
 COPY get-data.sh .
-COPY gdown.pl .
-COPY Renviron.site .
+
